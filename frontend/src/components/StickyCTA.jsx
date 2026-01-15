@@ -53,7 +53,7 @@ const StickyCTA = () => {
                                             <div className="absolute bottom-0 right-0 w-3 h-3 bg-[#25D366] rounded-full border-2 border-[#2a2a2a]"></div>
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-white text-sm">Artiflex Support</h3>
+                                            <h3 className="font-bold text-white text-sm">Artifex Support</h3>
                                             <p className="text-xs text-white/60">Online now</p>
                                         </div>
                                     </div>
@@ -66,14 +66,14 @@ const StickyCTA = () => {
                                 <div className="p-4 bg-[#1a1a1a]">
                                     <div className="bg-[#2a2a2a] p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl mb-4 max-w-[90%] border border-white/5">
                                         <p className="text-sm text-white/90">
-                                            👋 Hi! Looking for a premium website or branding? We're here to help you at Artiflex.
+                                            👋 Hi! Looking for a premium website or branding? We're here to help you at Artifex.
                                         </p>
                                     </div>
 
                                     {/* Actions */}
                                     <div className="space-y-3">
                                         <a
-                                            href="https://wa.me/918002599534?text=Hi%20Artiflex%2C%20I%20visited%20your%20website%20and%20I%27m%20impressed%20by%20your%20work.%20I%20am%20looking%20for%20a%20premium%20website%20and%20branding%20solution%20to%20elevate%20my%20business.%20Could%20we%20schedule%20a%20consultation%20to%20discuss%20details%3F"
+                                            href="https://wa.me/918002599534?text=Hi%20Artifex%2C%20I%20visited%20your%20website%20and%20I%27m%20impressed%20by%20your%20work.%20I%20am%20looking%20for%20a%20premium%20website%20and%20branding%20solution%20to%20elevate%20my%20business.%20Could%20we%20schedule%20a%20consultation%20to%20discuss%20details%3F"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="w-full h-14 bg-[#25D366] hover:bg-[#20b85a] rounded-xl flex items-center justify-between px-4 transition-all group"

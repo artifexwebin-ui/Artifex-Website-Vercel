@@ -89,8 +89,8 @@ const Contact = () => {
         Ready to Get More <br /><span className="text-surface-dark-muted font-serif italic">Patients Online?</span></h2><p className="text-lg text-surface-dark-muted mb-10 max-w-lg leading-relaxed">
         Have a project in mind or just want to explore what's possible?
         We're here to turn your vision into a digital reality.
-      </p><div className="space-y-8"><div className="flex items-start gap-4"><div className="w-12 h-12 rounded-full bg-surface-dark-foreground/10 flex items-center justify-center shrink-0"><Mail className="w-5 h-5 text-surface-dark-foreground" /></div><div><h4 className="text-lg font-medium text-surface-dark-foreground mb-1">Email Us</h4><a href="mailto:artiflexstudio@gmail.com" className="text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
-        artiflexstudio@gmail.com
+      </p><div className="space-y-8"><div className="flex items-start gap-4"><div className="w-12 h-12 rounded-full bg-surface-dark-foreground/10 flex items-center justify-center shrink-0"><Mail className="w-5 h-5 text-surface-dark-foreground" /></div><div><h4 className="text-lg font-medium text-surface-dark-foreground mb-1">Email Us</h4><a href="mailto:artifexweb@gmail.com" className="text-surface-dark-muted hover:text-surface-dark-foreground transition-colors">
+        artifexweb@gmail.com
       </a></div></div><div className="flex items-start gap-4"><div className="w-12 h-12 rounded-full bg-surface-dark-foreground/10 flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-surface-dark-foreground" /></div><div><h4 className="text-lg font-medium text-surface-dark-foreground mb-1">Office</h4><p className="text-surface-dark-muted">
         Remote First <br />
         Available Worldwide

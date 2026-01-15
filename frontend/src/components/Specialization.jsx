@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Stethoscope, Building2, GraduationCap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const industries = [
     {
@@ -7,7 +8,7 @@ const industries = [
         title: "Dentists & Dental Clinics",
         description: "Patient-focused websites that build trust and drive appointments.",
         highlight: true,
-        link: "https://minimal-dental-website.vercel.app/"
+        link: "/design-catalogue"
     },
     {
         icon: Building2,
@@ -72,14 +73,23 @@ const Specialization = () => {
                             </p>
 
                             {item.highlight ? (
-                                <a
-                                    href={item.link}
-                                    target={item.link.startsWith("http") ? "_blank" : "_self"}
-                                    rel={item.link.startsWith("http") ? "noopener noreferrer" : ""}
-                                    className="inline-flex items-center gap-2 text-sm font-bold hover:gap-3 transition-all"
-                                >
-                                    Learn More <ArrowRight size={16} />
-                                </a>
+                                item.link.startsWith("http") ? (
+                                    <a
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm font-bold hover:gap-3 transition-all"
+                                    >
+                                        Learn More <ArrowRight size={16} />
+                                    </a>
+                                ) : (
+                                    <Link
+                                        to={item.link}
+                                        className="inline-flex items-center gap-2 text-sm font-bold hover:gap-3 transition-all"
+                                    >
+                                        Learn More <ArrowRight size={16} />
+                                    </Link>
+                                )
                             ) : (
                                 <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-surface-dark-foreground/5 text-surface-dark-muted">
                                     Coming Soon

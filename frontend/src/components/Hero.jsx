@@ -35,7 +35,7 @@ const Hero = () => {
         style={{ y: titleY }}
         className="text-white/60 text-sm uppercase tracking-widest mb-6"
       >
-        Artiflex Web
+        Artifex Web
       </motion.p><motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const Hero = () => {
           style={{ y: buttonsY }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         ><a
-          href="mailto:artiflexstudio@gmail.com"
+          href="mailto:artifexweb@gmail.com"
           className="px-8 py-4 bg-surface-dark-foreground text-surface-dark font-medium rounded-full hover:bg-surface-dark-foreground/90 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
             Get a Free Website Audit
@@ -78,7 +78,7 @@ const Hero = () => {
         style={{ y: mockupY, scale: mockupScale }}
         className="container mx-auto px-6 mt-16 relative z-10"
       ><div className="max-w-4xl mx-auto"><div className="bg-surface-dark rounded-t-xl p-3 flex items-center gap-2"><div className="flex gap-2"><div className="w-3 h-3 rounded-full bg-red-500/70" /><div className="w-3 h-3 rounded-full bg-yellow-500/70" /><div className="w-3 h-3 rounded-full bg-green-500/70" /></div><div className="flex-1 flex justify-center"><div className="bg-white/10 rounded-md px-4 py-1 text-xs text-surface-dark-muted">
-        artiflexstudio.io
+        artifexweb.in
       </div></div></div><div className="bg-gradient-to-b from-surface-dark to-background rounded-b-xl overflow-hidden"><div className="aspect-video bg-gradient-to-br from-muted to-background flex items-center justify-center"><div className="text-center p-8"><div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-foreground/5 flex items-center justify-center"><span className="text-2xl">✨</span></div><p className="text-muted-foreground text-sm">Your next amazing project starts here</p></div></div></div></div></motion.div>{
         /* Trust badges with parallax */
       }<motion.div

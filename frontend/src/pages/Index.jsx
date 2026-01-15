@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials";
 
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
-import CTA from "@/components/CTA";
+
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 
@@ -44,7 +44,7 @@ const Index = () => {
 
       <FAQ />
       <Contact />
-      <CTA />
+
       <Footer />
       <StickyCTA />
     </div>

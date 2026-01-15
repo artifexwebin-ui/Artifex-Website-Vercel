@@ -47,7 +47,7 @@ const Terms = () => {
                             {
                                 icon: CheckCircle,
                                 title: "1. Acceptance of Terms",
-                                content: "By engaging with Artifex Studio for website design, development, or branding services, you agree to be bound by these terms. We believe in mutual respect and clear communication to deliver the best results."
+                                content: "By engaging with Artifex Web for website design, development, or branding services, you agree to be bound by these terms. We believe in mutual respect and clear communication to deliver the best results."
                             },
                             {
                                 icon: FileText,

@@ -126,7 +126,7 @@ const NotFound = () => {
 
       <div className="py-8 text-center relative z-10 border-t border-white/5 bg-black/20 backdrop-blur-sm">
         <p className="text-white/30 text-xs tracking-[0.2em] font-mono uppercase">
-          Signal_Lost // Coordinates_Unknown // Artiflex_Studio
+          Signal_Lost // Coordinates_Unknown // Artifex_Web
         </p>
       </div>
     </div>
