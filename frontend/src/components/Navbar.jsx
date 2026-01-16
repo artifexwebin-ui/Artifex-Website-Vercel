@@ -51,6 +51,12 @@ const Navbar = () => {
       setIsOpen(false);
       return;
     }
+    if (link.href.startsWith("/")) {
+      e.preventDefault();
+      navigate(link.href);
+      setIsOpen(false);
+      return;
+    }
   };
 
   return (
