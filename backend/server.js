@@ -77,23 +77,25 @@ app.post('/send-email', async (req, res) => {
             html: getAutoReplyTemplate(name)
         };
 
-        // 3. Respond IMMEDIATELY to frontend (Optimistic success)
-        res.status(200).json({ success: true, message: 'Message received, processing in background' });
+        // 3. Send Emails and WAIT for completion (Required for Serverless/Vercel)
+        await Promise.all([
+            transporter.sendMail(adminMailOptions),
+            transporter.sendMail(userMailOptions)
+        ]);
 
-        // 4. Send Emails in Background
-        try {
-            await Promise.all([
-                transporter.sendMail(adminMailOptions),
-                transporter.sendMail(userMailOptions)
-            ]);
-            console.log(`Email processed successfully for: ${email}`);
-        } catch (bgError) {
-            console.error('Background Email Error:', bgError);
-        }
+        console.log(`Emails sent successfully for: ${email}`);
+
+        // 4. Respond ONLY after emails are confirmed sent
+        res.status(200).json({ success: true, message: 'Message received and emails sent successfully' });
+
     } catch (error) {
-        console.error('Error processing request:', error);
+        console.error('Email Error:', error);
         if (!res.headersSent) {
-            res.status(500).json({ success: false, message: 'Internal Server Error', error: error.message });
+            res.status(500).json({
+                success: false,
+                message: 'Failed to send email. Please check server logs.',
+                error: error.message
+            });
         }
     }
 });
