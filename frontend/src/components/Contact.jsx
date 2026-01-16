@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -67,6 +68,10 @@ const Contact = () => {
       if (data.success) {
         setShowSuccess(true);
         setFormData({ name: "", email: "", subject: "", message: "", projectType: "", otherProjectType: "" });
+        // Redirect to Thank You page for Google Ads conversion tracking
+        setTimeout(() => {
+          navigate("/thank-you");
+        }, 500);
       } else {
         throw new Error(data.message || "Failed to send message");
       }

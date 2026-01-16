@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -9,6 +10,7 @@ import SuccessModal from "./SuccessModal";
 
 const PricingEnquiryModal = ({ isOpen, onClose, selectedPlan }) => {
     const { toast } = useToast();
+    const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const [formData, setFormData] = useState({
@@ -74,6 +76,11 @@ const PricingEnquiryModal = ({ isOpen, onClose, selectedPlan }) => {
             if (data.success) {
                 setShowSuccess(true);
                 setFormData({ name: "", email: "", phone: "", message: "", plan: selectedPlan || "Custom Enterprise" });
+                // Redirect to Thank You page for Google Ads conversion tracking
+                setTimeout(() => {
+                    navigate("/thank-you");
+                    onClose();
+                }, 500);
             } else {
                 throw new Error(data.message || "Failed to send message");
             }
