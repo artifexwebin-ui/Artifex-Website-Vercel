@@ -194,7 +194,7 @@ const Approach = () => {
                     </motion.div>
                   ))}
                   <div className="pt-4">
-                    <a href="#contact" onClick={() => setSelectedService(null)} className="inline-flex w-full items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-primary/90 transition-all">
+                    <a href="#contact" onClick={() => setSelectedStep(null)} className="inline-flex w-full items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-primary/90 transition-all">
                       Start Your Journey <ArrowRight size={16} />
                     </a>
                   </div>
