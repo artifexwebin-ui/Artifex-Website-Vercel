@@ -52,6 +52,9 @@ app.get('/', (req, res) => {
     res.send('Artifex Backend is Running');
 });
 
+// Silence favicon warnings in logs
+app.get(['/favicon.ico', '/favicon.png'], (req, res) => res.status(204).end());
+
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message, projectType, otherProjectType } = req.body;
 
