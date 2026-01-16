@@ -52,12 +52,18 @@ Now we deploy the frontend and connect it to the backend.
 
 ---
 
-## 🌐 Step 3: Connect Domain to Frontend
+## 🌐 Step 3: Connect Domain (Hostinger)
 
 1.  **Vercel Settings (Frontend Project)**:
-    *   Go to your `artifex-web` project settings > **Domains**.
-    *   Add `www.artifexweb.in`.
-    *   Follow the instructions to update your DNS records on Hostinger (A Record and CNAME).
+    *   Go to your `artifex-web-frontend` project > **Settings** > **Domains**.
+    *   Add `artifexweb.in`. Vercel will ask if you want to add the `www` redirect. Say **Yes**.
+2.  **Hostinger Dashboard (DNS Zone Editor)**:
+    *   Go to **DNS / Nameservers** for your domain.
+    *   **Add/Update these 2 records**:
+        1. **Type**: `A`, **Name**: `@`, **Value**: `76.76.21.21` (Vercel IP)
+        2. **Type**: `CNAME`, **Name**: `www`, **Value**: `cname.vercel-dns.com`
+    *   ⚠️ **IMPORTANT**: Delete any old `A` or `CNAME` records that already have `@` or `www` to avoid conflicts.
+3.  **Wait for Propagation**: It can take 5 minutes to a few hours, but usually, it's very fast. Vercel will show a green checkmark once it's live!
 
 ---
 
