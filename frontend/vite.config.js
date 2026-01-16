@@ -16,5 +16,19 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src")
     }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('three')) return 'vendor-three';
+            if (id.includes('framer-motion')) return 'vendor-motion';
+            return 'vendor'; // all other nodes
+          }
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000 // Raise limit since 3D apps are naturally larger
   }
 }));
