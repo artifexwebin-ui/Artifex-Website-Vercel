@@ -54,7 +54,11 @@ const PricingEnquiryModal = ({ isOpen, onClose, selectedPlan }) => {
             };
 
             const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
-            const baseUrl = apiUrl.startsWith('http') ? apiUrl : `https://${apiUrl}`;
+            // Sanitize: ensure https:// and remove trailing slashes
+            const cleanUrl = apiUrl.replace(/\/+$/, "");
+            const baseUrl = cleanUrl.startsWith('http') ? cleanUrl : `https://${cleanUrl}`;
+
+            console.log("🚀 Calling API:", `${baseUrl}/send-email`);
 
             const [response] = await Promise.all([
                 fetch(`${baseUrl}/send-email`, {
