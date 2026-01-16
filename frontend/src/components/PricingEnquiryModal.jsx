@@ -53,8 +53,11 @@ const PricingEnquiryModal = ({ isOpen, onClose, selectedPlan }) => {
                 message: `Plan Interested: ${formData.plan}\n\nPhone: ${formData.phone}\n\nMessage: ${formData.message}`
             };
 
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+            const baseUrl = apiUrl.startsWith('http') ? apiUrl : `https://${apiUrl}`;
+
             const [response] = await Promise.all([
-                fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/send-email`, {
+                fetch(`${baseUrl}/send-email`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload),

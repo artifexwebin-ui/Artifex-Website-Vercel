@@ -45,9 +45,12 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+      const baseUrl = apiUrl.startsWith('http') ? apiUrl : `https://${apiUrl}`;
+
       // Run fetch & a minimum timer in parallel for smooth UX
       const [response] = await Promise.all([
-        fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/send-email`, {
+        fetch(`${baseUrl}/send-email`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),

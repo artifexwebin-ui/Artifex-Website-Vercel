@@ -15,6 +15,7 @@ const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:3000',
     'https://artifex-web.vercel.app',
+    'https://artifex-website-frontend.vercel.app',
     'https://www.artifexweb.in',
     'https://artifexweb.in'
 ];
