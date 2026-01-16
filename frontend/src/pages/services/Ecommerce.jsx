@@ -3,10 +3,16 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Ecommerce = () => {
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>E-Commerce Website Development | Artifex Web India</title>
+                <meta name="description" content="Launch a profitable online store with Artifex Web. Secure payments, inventory management, and high-converting designs for Indian businesses." />
+                <link rel="canonical" href="https://artifexweb.in/services/ecommerce" />
+            </Helmet>
             <Navbar />
 
             {/* Hero */}

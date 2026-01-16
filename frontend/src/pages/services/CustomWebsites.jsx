@@ -3,10 +3,16 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const CustomWebsites = () => {
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>Custom Dental Website Design | Artifex Web India</title>
+                <meta name="description" content="Get a tailor-made, high-performance website for your dental clinic in India. Mobile-optimized, fast, and designed to convert patients." />
+                <link rel="canonical" href="https://artifexweb.in/services/custom-websites" />
+            </Helmet>
             <Navbar />
 
             {/* Hero */}
