@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Specialization from "@/components/Specialization";
@@ -6,6 +7,7 @@ import Services from "@/components/Services";
 
 import Approach from "@/components/Approach";
 import Testimonials from "@/components/Testimonials";
+import HomePricing from "@/components/HomePricing";
 
 
 import FAQ from "@/components/FAQ";
@@ -32,10 +34,16 @@ const Index = () => {
   }, [location]);
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Artifex Web | Professional Dental Website Design & SEO in India</title>
+        <meta name="description" content="Artifex Web specializes in premium dental website design and Local SEO for dentists in India. Get more patient appointments with high-converting, mobile-friendly websites." />
+        <link rel="canonical" href="https://artifexweb.in/" />
+      </Helmet>
       <Navbar />
       <Hero />
       <Specialization />
       <DentistConcept />
+      <HomePricing />
       <Services />
 
       <Approach />

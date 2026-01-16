@@ -41,7 +41,7 @@ const GlowingGlobe = ({ isDark }) => {
                     color={isDark ? "#22d3ee" : "#64748b"} // Cyan-400 vs Slate-500
                     wireframe
                     transparent
-                    opacity={isDark ? 0.15 : 0.1}
+                    opacity={isDark ? 0.3 : 0.15}
                 />
             </Sphere>
 

@@ -25,13 +25,13 @@ const CTA = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
-              href="mailto:artiflexstudio@gmail.com"
+              href="#contact"
               className="px-10 py-5 bg-foreground text-background font-bold text-lg rounded-full hover:bg-foreground/90 transition-all shadow-xl hover:scale-105"
             >
               Get a Free Consultation
             </a>
             <a
-              href="#works"
+              href="/design-catalogue"
               className="px-10 py-5 border-2 border-border text-foreground font-semibold text-lg rounded-full hover:bg-muted transition-all"
             >
               View Our Work

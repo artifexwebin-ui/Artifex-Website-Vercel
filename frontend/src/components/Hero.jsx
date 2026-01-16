@@ -22,7 +22,7 @@ const Hero = () => {
   // Since Three.js handles its own animation, we might not need these specific transforms for the background itself.
 
   return (
-    <section ref={sectionRef} id="home" className="min-h-screen bg-surface-dark pt-32 pb-8 flex flex-col relative overflow-hidden">
+    <section ref={sectionRef} id="home" className="min-h-screen bg-surface-dark pt-32 pb-8 md:pb-14 lg:pb-20 flex flex-col relative overflow-hidden">
       <HeroBackground />
 
       {/* Layer 2: Gradient Overlay (Removed - Handled in HeroBackground now) */}
@@ -60,40 +60,31 @@ const Hero = () => {
           style={{ y: buttonsY }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         ><a
-          href="mailto:artifexweb@gmail.com"
+          href="#contact"
           className="px-8 py-4 bg-surface-dark-foreground text-surface-dark font-medium rounded-full hover:bg-surface-dark-foreground/90 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
             Get a Free Website Audit
           </a><a
-            href="#works"
+            href="/design-catalogue"
             className="px-8 py-3 border border-surface-dark-muted text-surface-dark-foreground font-medium rounded-full hover:border-surface-dark-foreground transition-colors"
           >
             View Dental Website Example
-          </a></motion.div></div></div>{
-        /* Browser mockup with parallax */
-      }<motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        style={{ y: mockupY, scale: mockupScale }}
-        className="container mx-auto px-6 mt-16 relative z-10"
-      ><div className="max-w-4xl mx-auto"><div className="bg-surface-dark rounded-t-xl p-3 flex items-center gap-2"><div className="flex gap-2"><div className="w-3 h-3 rounded-full bg-red-500/70" /><div className="w-3 h-3 rounded-full bg-yellow-500/70" /><div className="w-3 h-3 rounded-full bg-green-500/70" /></div><div className="flex-1 flex justify-center"><div className="bg-white/10 rounded-md px-4 py-1 text-xs text-surface-dark-muted">
-        artifexweb.in
-      </div></div></div><div className="bg-gradient-to-b from-surface-dark to-background rounded-b-xl overflow-hidden"><div className="aspect-video bg-gradient-to-br from-muted to-background flex items-center justify-center"><div className="text-center p-8"><div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-foreground/5 flex items-center justify-center"><span className="text-2xl">✨</span></div><p className="text-muted-foreground text-sm">Your next amazing project starts here</p></div></div></div></div></motion.div>{
-        /* Trust badges with parallax */
-      }<motion.div
+          </a>
+        </motion.div>
+      </div>
+      </div>
+
+      {/* Trust badges with parallax */}
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
         style={{ y: badgesY }}
-        className="container mx-auto px-6 mt-16 relative z-10"
-      ><div className="flex flex-col items-center gap-12">
-          {/* Trust Stats */}
-          {/* Trust Stats - Removed as requested */}
-
-          {/* Trusted By */}
-
-        </div></motion.div>    </section>
+        className="container mx-auto px-6 mt-0 relative z-10"
+      >
+        {/* Trust Stats removed as requested to reduce space */}
+      </motion.div>
+    </section>
   );
 };
 

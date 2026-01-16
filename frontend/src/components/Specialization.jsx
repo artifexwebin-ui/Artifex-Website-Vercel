@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Stethoscope, Building2, GraduationCap } from "lucide-react";
+import { ArrowRight, Stethoscope, Building2, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const industries = [
@@ -12,15 +12,15 @@ const industries = [
     },
     {
         icon: Building2,
-        title: "Healthcare Clinics",
-        description: "Professional digital presence for medical centers and specialists.",
+        title: "Hotels Website",
+        description: "Premium digital experiences for hotels and hospitality businesses.",
         highlight: false,
         link: "#"
     },
     {
-        icon: GraduationCap,
-        title: "Coaching Institutes",
-        description: "Engaging platforms for education providers and training centers.",
+        icon: Activity,
+        title: "Healthcare Clinics",
+        description: "Professional digital presence for medical centers and specialists.",
         highlight: false,
         link: "#"
     }
@@ -28,7 +28,7 @@ const industries = [
 
 const Specialization = () => {
     return (
-        <section className="py-24 bg-surface-dark relative overflow-hidden">
+        <section className="pt-0 pb-24 bg-surface-dark relative overflow-hidden">
             {/* Background decorations */}
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-surface-dark-foreground/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
@@ -46,7 +46,7 @@ const Specialization = () => {
                     <div className="h-1 w-20 bg-surface-dark-foreground/20 mx-auto rounded-full" />
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-[90rem] mx-auto mb-16">
                     {industries.map((item, index) => (
                         <motion.div
                             key={item.title}
@@ -54,9 +54,9 @@ const Specialization = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`p-8 rounded-2xl border transition-all duration-300 group ${item.highlight
-                                ? "bg-surface-dark-foreground text-surface-dark border-surface-dark-foreground shadow-xl hover:-translate-y-1"
-                                : "bg-surface-dark/50 border-surface-dark-muted/20 text-surface-dark-foreground hover:border-surface-dark-foreground/50 hover:bg-surface-dark/80"
+                            className={`p-10 md:p-12 rounded-3xl border transition-all duration-300 group h-full flex flex-col justify-between ${item.highlight
+                                ? "bg-surface-dark-foreground text-surface-dark border-surface-dark-foreground shadow-2xl hover:-translate-y-2"
+                                : "bg-surface-dark/40 backdrop-blur-sm border-surface-dark-muted/20 text-surface-dark-foreground hover:border-surface-dark-foreground/30 hover:bg-surface-dark/60"
                                 }`}
                         >
                             <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${item.highlight
@@ -87,7 +87,7 @@ const Specialization = () => {
                                         to={item.link}
                                         className="inline-flex items-center gap-2 text-sm font-bold hover:gap-3 transition-all"
                                     >
-                                        Learn More <ArrowRight size={16} />
+                                        View Examples <ArrowRight size={16} />
                                     </Link>
                                 )
                             ) : (

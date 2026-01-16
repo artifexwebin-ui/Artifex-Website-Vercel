@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -9,6 +10,11 @@ const Terms = () => {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-background">
+            <Helmet>
+                <title>Terms of Service | Artifex Web</title>
+                <meta name="robots" content="noindex" />
+                <link rel="canonical" href="https://artifexweb.in/terms" />
+            </Helmet>
             <Navbar />
 
             {/* Hero Section */}

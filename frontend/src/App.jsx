@@ -12,6 +12,8 @@ import Branding from "./pages/services/Branding";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DesignCatalogue from "./pages/DesignCatalogue";
+import ComingSoon from "./pages/ComingSoon";
+import Pricing from "./pages/Pricing"; // Import Pricing page
 
 const queryClient = new QueryClient();
 
@@ -27,9 +29,11 @@ const App = () => (
             <Route path="/services/custom-websites" element={<CustomWebsites />} />
             <Route path="/services/ecommerce" element={<Ecommerce />} />
             <Route path="/services/branding" element={<Branding />} />
+            <Route path="/pricing" element={<Pricing />} /> {/* Add Pricing Route */}
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/design-catalogue" element={<DesignCatalogue />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

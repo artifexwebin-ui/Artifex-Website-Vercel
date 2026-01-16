@@ -97,7 +97,7 @@ const getAutoReplyTemplate = (name) => `
     <div class="header">
        <!-- Replaced with a placeholder if direct CID is tricky without attachment, but styling mimics it -->
        <div style="font-size: 32px; font-weight: bold; color: #fff; text-shadow: 0 0 10px #3b82f6;">A</div>
-       <div style="font-size: 20px; font-weight: 600; color: #e2e8f0; margin-top: 10px;">Artifex Studio</div>
+       <div style="font-size: 20px; font-weight: 600; color: #e2e8f0; margin-top: 10px;">Artifex Web</div>
     </div>
     <div class="content">
       <h1 class="h1">Message Received, Captain! 🚀</h1>
@@ -115,7 +115,7 @@ const getAutoReplyTemplate = (name) => `
       </div>
     </div>
     <div class="footer">
-      &copy; 2026 Artifex Studio. All systems nominal.<br>
+      &copy; 2026 Artifex Web. All systems nominal.<br>
       Crafted with precision in the digital cosmos.
     </div>
   </div>

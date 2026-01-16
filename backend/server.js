@@ -11,7 +11,30 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+    'http://localhost:5173',
+    'http://localhost:3000',
+    'https://artifex-web.vercel.app',
+    'https://www.artifexweb.in',
+    'https://artifexweb.in'
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            // If you want to allow all Vercel preview deployments, you can check if origin ends with .vercel.app
+            if (origin.endsWith('.vercel.app')) {
+                return callback(null, true);
+            }
+            var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
+    credentials: true
+}));
 app.use(bodyParser.json());
 
 // Nodemailer Transporter
@@ -38,7 +61,7 @@ app.post('/send-email', async (req, res) => {
     try {
         // 1. Send Notification to Admin (You)
         const adminMailOptions = {
-            from: `"${name}" <${email}>`, // Shows sender's name
+            from: `"${name} (via Artifex Website)" <${process.env.EMAIL_USER}>`, // Recommended by Gmail SMTP
             to: process.env.EMAIL_USER,    // You receive this
             subject: `New Inquiry: ${subject || "No Subject"}`,
             html: getAdminNotificationTemplate({ name, email, subject, message, projectType, otherProjectType }),
@@ -47,7 +70,7 @@ app.post('/send-email', async (req, res) => {
 
         // 2. Send Auto-Reply to User
         const userMailOptions = {
-            from: `"Artifex Studio" <${process.env.EMAIL_USER}>`,
+            from: `"Artifex Web" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: `We received your message! 🚀`,
             html: getAutoReplyTemplate(name)

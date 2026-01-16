@@ -7,28 +7,28 @@ import {
 } from "@/components/ui/accordion";
 const faqs = [
   {
-    question: "How long does a dental website take?",
-    answer: "Most custom dental websites are designed, developed, and launched within 2-4 weeks. We work efficiently to get your new site live without cutting corners on quality."
+    question: "How much does a dental website cost in India?",
+    answer: "We offer tailored packages for Indian dentists, ranging from basic profiles to advanced SEO-ready sites. Since every practice is unique, please contact us for a quote that fits your specific needs."
   },
   {
-    question: "Will this help me get more patients?",
-    answer: "Yes. We design with a 'conversion-first' approach. By highlighting your expertise, patient reviews, and making it easy to book appointments, your site will turn more visitors into booked patients."
+    question: "Do you help with Google Maps and Local SEO?",
+    answer: "Absolutely. For Indian clinics, appearing on 'dentist near me' searches is crucial. We optimize your Google Business Profile to ensure local patients find you easily."
   },
   {
-    question: "Can you redesign my existing website?",
-    answer: "Absolutely. We can audit your current site, identify what's not working, and rebuild it with a modern design and better structure while preserving your existing domain authority."
+    question: "Can patients book appointments via WhatsApp?",
+    answer: "Yes! We integrate a direct WhatsApp booking feature, which is the most popular way for patients in India to connect with doctors."
   },
   {
-    question: "Do you provide support after launch?",
-    answer: "Yes, we believe in long-term partnerships. We offer ongoing support packages to handle updates, security, and minor changes so you can focus on treating patients."
+    question: "Will the website work on mobile phones?",
+    answer: "Yes. Over 80% of patients use mobile phones to search for doctors. Our designs are 100% mobile-responsive and load fast on all networks."
   },
   {
-    question: "How much does a dental website usually cost?",
-    answer: "Every practice is unique, but our packages typically start at $1,500. This includes custom design, mobile optimization, and local SEO setup. Contact us for a precise quote tailored to your needs."
+    question: "Do you provide support after the site is live?",
+    answer: "Yes, we offer ongoing AMC (Annual Maintenance) support to handle updates, security, and changes so you can focus on your patients."
   }
 ];
 const FAQ = () => {
-  return <section className="py-10 bg-surface-dark"><div className="container mx-auto px-6"><motion.div
+  return <section id="faq" className="py-10 bg-surface-dark"><div className="container mx-auto px-6"><motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}

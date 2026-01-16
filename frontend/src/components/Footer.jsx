@@ -1,5 +1,5 @@
 import { ArrowRight, MapPin, Mail, MessageCircle, ShieldCheck } from "lucide-react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/artifex_logo_pro.png";
 
 const Footer = () => {
   return (
@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Column 1: Brand */}
           <div className="space-y-4"> {/* Reduced space-y */}
             <div className="flex items-center gap-2">
-              <img src={logo} alt="Artifex Logo" className="w-8 h-8 rounded-full object-cover" />
-              <span className="text-surface-dark-foreground font-semibold text-lg tracking-tight">
+              <img src={logo} alt="Artifex Logo" className="w-8 h-8 rounded-lg object-cover" />
+              <span className="text-surface-dark-foreground font-bold text-lg tracking-tight">
                 Artifex
               </span>
             </div>
@@ -29,24 +29,24 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-surface-dark-foreground/80 mb-4">Services</h4> {/* refined header */}
             <ul className="space-y-2.5"> {/* Reduced vertical spacing */}
               <li>
-                <a href="#services" className="text-surface-dark-foreground text-sm hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/design-catalogue" className="text-surface-dark-foreground text-sm hover:text-primary transition-colors flex items-center gap-2">
                   Dentist Website Design
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                <a href="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
                   Healthcare Website Design
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                <a href="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
                   Business Websites
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
-                  Website Redesign
+                <a href="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                  Hotels Website
                 </a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#approach" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                <a href="#about" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
                   Our Approach
                 </a>
               </li>
@@ -84,21 +84,19 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-surface-dark-foreground/80 mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-2.5">
-                <MapPin className="w-3.5 h-3.5 text-surface-dark-muted" />
-                <span className="text-surface-dark-muted text-sm">Jalandhar, India</span>
-              </div>
-              <div className="flex items-center gap-2.5">
                 <Mail className="w-3.5 h-3.5 text-surface-dark-muted" />
-                <a href="mailto:hello@artifexweb.in" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
-                  hello@artifexweb.in
+                <a href="mailto:artifexweb.in@gmail.com" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                  artifexweb.in@gmail.com
                 </a>
               </div>
               <a
-                href="https://wa.me/YOUR_NUMBER"
+                href="https://wa.me/918002599534"
                 className="inline-flex items-center gap-2 text-sm text-surface-dark-foreground hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
-                <span>Chat on WhatsApp</span>
+                <span>Contact</span>
               </a>
             </div>
 
