@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import HeroBackground from "./HeroBackground";
 
 
@@ -64,12 +65,12 @@ const Hero = () => {
           className="px-8 py-4 bg-surface-dark-foreground text-surface-dark font-medium rounded-full hover:bg-surface-dark-foreground/90 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
             Get a Free Website Audit
-          </a><a
-            href="/design-catalogue"
+          </a><Link
+            to="/design-catalogue"
             className="px-8 py-3 border border-surface-dark-muted text-surface-dark-foreground font-medium rounded-full hover:border-surface-dark-foreground transition-colors"
           >
             View Dental Website Example
-          </a>
+          </Link>
         </motion.div>
       </div>
       </div>

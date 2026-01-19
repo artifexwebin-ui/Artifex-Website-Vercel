@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   const ref = useRef(null);
@@ -30,12 +29,12 @@ const CTA = () => {
             >
               Get a Free Consultation
             </a>
-            <a
-              href="/design-catalogue"
+            <Link
+              to="/design-catalogue"
               className="px-10 py-5 border-2 border-border text-foreground font-semibold text-lg rounded-full hover:bg-muted transition-all"
             >
               View Our Work
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, Smartphone, Shield, Search, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import dentalConceptImage from "../assets/dental_concept_artifex.png";
 
 const features = [
@@ -77,13 +78,13 @@ const DentistConcept = () => {
                                 ))}
                             </div>
 
-                            <a
-                                href="/design-catalogue"
+                            <Link
+                                to="/design-catalogue"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-surface-dark-foreground text-surface-dark font-medium rounded-full hover:bg-surface-dark-foreground/90 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                             >
                                 View Dental Website Example
                                 <ArrowRight size={18} />
-                            </a>
+                            </Link>
                         </motion.div>
                     </div>
 

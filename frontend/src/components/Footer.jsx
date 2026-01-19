@@ -1,4 +1,5 @@
 import { ArrowRight, MapPin, Mail, MessageCircle, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "../assets/artifex_logo_pro.png";
 
 const Footer = () => {
@@ -29,25 +30,25 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-surface-dark-foreground/80 mb-4">Services</h4> {/* refined header */}
             <ul className="space-y-2.5"> {/* Reduced vertical spacing */}
               <li>
-                <a href="/design-catalogue" className="text-surface-dark-foreground text-sm hover:text-primary transition-colors flex items-center gap-2">
+                <Link to="/design-catalogue" className="text-surface-dark-foreground text-sm hover:text-primary transition-colors flex items-center gap-2">
                   Dentist Website Design
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                <Link to="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
                   Healthcare Website Design
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                <Link to="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
                   Business Websites
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
+                <Link to="/coming-soon" className="text-surface-dark-muted text-sm hover:text-surface-dark-foreground transition-colors">
                   Hotels Website
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -115,16 +116,16 @@ const Footer = () => {
             © 2026 Artifex. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="/privacy" className="text-surface-dark-muted/50 hover:text-surface-dark-muted text-[10px] uppercase tracking-wider transition-colors">
+            <Link to="/privacy" className="text-surface-dark-muted/50 hover:text-surface-dark-muted text-[10px] uppercase tracking-wider transition-colors">
               Privacy Policy
-            </a>
-            <a href="/terms" className="text-surface-dark-muted/50 hover:text-surface-dark-muted text-[10px] uppercase tracking-wider transition-colors">
+            </Link>
+            <Link to="/terms" className="text-surface-dark-muted/50 hover:text-surface-dark-muted text-[10px] uppercase tracking-wider transition-colors">
               Terms of Service
-            </a>
-            <a href="/terms" className="flex items-center gap-1.5 text-surface-dark-muted/50 hover:text-surface-dark-muted text-[10px] uppercase tracking-wider transition-colors group">
+            </Link>
+            <Link to="/terms" className="flex items-center gap-1.5 text-surface-dark-muted/50 hover:text-surface-dark-muted text-[10px] uppercase tracking-wider transition-colors group">
               <ShieldCheck className="w-3 h-3 group-hover:text-primary transition-colors" />
               <span>Terms & Conditions</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
